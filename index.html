@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="prism.css">
+
+    <style>
+        body {
+            background-color: #fafafa;
+            color: #222;
+        }
+
+        h1,
+        h3,
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .subtopic {
+            font-weight: 500;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            font-weight: 400;
+        }
+
+        span {
+            color: #ff4e2f;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+
+    <h3>1. Basics</h3>
+    <pre><code class="language-js">console.log("Hello World");
+alert("Your Message!");
+prompt("Enter the value:");</code></pre>
+
+    <h3>2. Variables</h3>
+    <pre><code class="language-js">let a = 3;
+var b = 6;
+const PI = 3.14159;</code></pre>
+
+    <h4>If you want a general rule: always declare variables with <span>const</span> .<br>
+        If you think the value of the variable can change, use <span>let</span> .</h4>
+
+    <h4><span>var</span> has global scope and <span>let</span> has block scope. <span>var's</span> global scope means
+        that you can use the variables defined with <span>var</span> in the entire script. On the other hand,
+        <span>let's</span> block scope means you can only use variables defined with <span>let</span> in the specific
+        block of code in which they were defined.
+    </h4>
+
+    <h3>3. Operators</h3>
+    <pre><code class="language-js">let a = 77;
+let b = 11;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+console.log(a ** b); //a power b.</code></pre>
+
+    <h3>4. Data Types</h3>
+    <pre><code class="language-js">typeof(a); //finds the data type of a
+
+testVariable = 1;
+variableTypeTest1 = typeof testVariable;
+variableTypeTest2 = typeof(testVariable);
+console.log(variableTypeTest1);
+console.log(variableTypeTest2);</code></pre>
+
+    <h3>5. Increment & Decrement</h3>
+    <pre><code class="language-js"></code></pre>
+
+
+    <h3>6. String</h3>
+    <pre><code class="language-js">let singleString = 'Hi there!';
+let doubleString = "How are you?";
+let language = "JavaScript";
+
+let message = `Let's learn ${language}`;
+console.log(message);</code></pre>
+
+    <h3>7. Arrays</h3>
+    <pre><code class="language-js">animal = ["dog","cat","racoon","panda","hamster"];
+
+let mixedData = ["pizza", 3.14, true];
+console.log(typeof mixedData[0]);  //String
+console.log(typeof mixedData[1]); //number
+console.log(typeof mixedData[2]); //boolean
+
+//Accessing elements of an Arrays
+animal = ["dog","cat","racoon","panda","hamster"];
+console.log(animal[0]);
+
+//Overriding Elements
+cars[0] = "Tesla";
+
+//Find the length of an array
+console.log(animal.length);
+
+//Add elements in an array
+favoriteFruits = ["grapefruit", "orange", "lemon"];
+favoriteFruits.push("tangerine");
+let lengthOfFavoriteFruits = favoriteFruits.push("lime");
+
+//Add elements at certain index
+let arrOfShapes = ["circle", "triangle", "rectangle", "pentagon"];
+arrOfShapes.splice(2, 0, "square", "trapezoid");
+
+//Adding array to another array
+let arr5 = [1, 2, 3];
+let arr6 = [4, 5, 6];
+let arr7 = arr5.concat(arr6);
+
+//Deleting elements
+arr.pop() //deletes the last element.
+arr.shift() //deletes the first element.
+arr.spice(3,6) //deletes elements between the range.
+
+//Finding elements
+num = [ 2, 6, 7, 8 ];
+let findValue = num.find(function(e) { return e === 6});
+let findValue2 = num.find(e => e === 10);
+console.log(findValue, findValue2);
+
+//Finding the position of elements
+num = [ 2, 6, 7, 8 ];
+let findIndex = num.indexOf(6);  //returns 1
+let findIndex2 = num.indexOf(10); //returns -1 because 10 doesn't exist in an array. 
+console.log(findIndex, findIndex2);
+
+//Sorting elements
+let names = ["James", "Alicia", "Anya", "Maria", "Bert"];
+names.sort(); //ascending order
+
+names.reverse(); //display the array in reverse order</code></pre>
+
+    <h3>8. Multidimensional Arrays</h3>
+    <pre><code class="language-js">let someValues1 = [1, 2, 3];
+let someValues2 = [4, 5, 6];
+let someValues3 = [7, 8, 9];
+
+let arrOfArrays = [someValues1, someValues2, someValues3];
+
+let arrOfArrays2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+//Accessing elements
+console.log(arrOfArrays2[1][1]);</code></pre>
+
+    <h3>9. Objects</h3>
+    <pre><code class="language-js">//Creating an object
+let dog = { dogName: "Puppy",
+            weight: 15,
+            color: "white",
+            breed: "japanese",
+            age: 7,
+            bites: true
+          };
+        
+//Accessing elements
+let dogColor1 = dog["color"];
+let dogColor2 = dog.color;
+
+//Updating Objects
+dog["color"] = "brown";
+dog.color = "brown";
+
+//Object in Objects
+
+//you can create another object inside an object...
+company.address.zipcode = "33117";
+company["address"]["number"] = "100";</code></pre>
+
+    <h3>10. Object and Arrays</h3>
+    <pre><code class="language-js"></code></pre>
+
+    <h3>11. if and else statement</h3>
+    <pre><code class="language-js">if(expression) {
+// code associated with the if block
+// will only be executed if the expression is true
+} else {
+// code associated with the else block
+// we don't need an else block, it is optional
+// this code will only be executed if the expression is false
+}
+
+//Conditional ternary operators
+expression ? statement for true : statement associated with false;
+let access = age < 18 ? "denied" : "allowed" ;
+age < 18 ? console.log("denied") : console.log("allowed");</code></pre>
+
+    <h3>12. switch case</h3>
+    <pre><code class="language-js">switch (expression) {
+case value1:
+// code to be executed
+break;
+case value2:
+// code to be executed
+break;
+case value3:
+// code to be executed
+break;
+default:
+// code to be executed when no cases match
+break;
+}</code></pre>
+
+    <h3>13. Math</h3>
+    <pre><code class="language-js">Math.random(); //generates random number between 0 to 1.
+Math.floor(float); 
+
+//random number between range
+function numRange(min, max) { // min and max included
+return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+const randNum = numRange(1, 6)
+console.log(randNum)</code></pre>
+
+    <h3>14. Loops</h3>
+    <pre><code class="language-js">//while loop
+while (condition) {
+// code that gets executed as long as the condition is true
+}
+    
+//do while loop
+do {
+ // code to be executed if the condition is true
+} while (condition);
+
+//for loop
+for (initialize variable; condition; statement) {
+// code to be executed
+}
+
+//for of loop
+let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];
+for (let name of names){
+console.log(name);
+}
+
+//for in loop
+let car = {
+    model: "Golf",
+    company: "Volkswagen",
+    year: 1999,
+    color: "black",
+};
+
+for (let prop in car){
+    console.log(car[prop]);
+}</code></pre>
+
+    <h3>15. Functions</h3>
+
+
+    <!--Javascript-->
+    <script src="prism.js"></script>
+</body>
+
+</html>
